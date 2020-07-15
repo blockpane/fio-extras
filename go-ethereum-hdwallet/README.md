@@ -1,12 +1,6 @@
-<h3 align="center">
-  <br />
-  <img src="https://user-images.githubusercontent.com/168240/51436479-a4cf9e80-1c42-11e9-9af3-3bb827b8f2de.png" alt="logo" width="600" />
-  <br />
-  <br />
-  <br />
-</h3>
-
 # go-ethereum-hdwallet
+
+_Modifications for fio-extras include changes in default derivation paths, and handling of public keys._
 
 > Ethereum HD Wallet derivations from [mnemonic] seed in Go (golang). Implements the [go-ethereum](https://github.com/ethereum/go-ethereum) [`accounts.Wallet`](https://github.com/ethereum/go-ethereum/blob/master/accounts/accounts.go) interface.
 
