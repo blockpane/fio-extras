@@ -8,7 +8,7 @@ import (
 	"github.com/btcsuite/btcutil"
 	"github.com/fioprotocol/fio-go/eos"
 	"github.com/fioprotocol/fio-go/eos/ecc"
-	hdwallet "github.com/frameloss/fio-extras/go-ethereum-hdwallet"
+	hdwallet "github.com/frameloss/fio-extras/internal/go-ethereum-hdwallet"
 	"github.com/tyler-smith/go-bip32"
 	mrand "math/rand"
 	"strings"
