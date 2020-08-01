@@ -10,7 +10,7 @@ import (
 	"github.com/fioprotocol/fio-go/eos/ecc"
 	hdwallet "github.com/frameloss/fio-extras/internal/go-ethereum-hdwallet"
 	"github.com/tyler-smith/go-bip32"
-	mrand "math/rand"
+	mrand "math/rand" // #nosec
 	"strings"
 	"time"
 )
