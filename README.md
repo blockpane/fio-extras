@@ -1,4 +1,5 @@
 # fio-extras
+![gosec](https://github.com/frameloss/fio-extras/workflows/Run%20Gosec/badge.svg)
 
 fio-extras includes a keosd client, and helper for HD key derivation.
 
