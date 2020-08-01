@@ -80,7 +80,10 @@ func (k *KeosClient) Unlock(password string, wallet string) error {
 		if err != nil {
 			return err
 		}
-		resp.Body.Close()
+		err = resp.Body.Close()
+		if err != nil {
+			return err
+		}
 
 		if resp.StatusCode != http.StatusOK {
 			already := &alreadyUnlocked{}
@@ -141,7 +144,10 @@ func (k *KeosClient) GetKeys(nodeosApi *fio.API) error {
 	if err != nil {
 		return err
 	}
-	resp.Body.Close()
+	err = resp.Body.Close()
+	if err != nil {
+		return err
+	}
 	if resp.StatusCode != http.StatusOK {
 		j, e := json.MarshalIndent(json.RawMessage(body), "", "  ")
 		if e != nil {
