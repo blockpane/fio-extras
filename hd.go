@@ -3,12 +3,12 @@ package fiox
 import (
 	"errors"
 	"fmt"
+	hdwallet "github.com/blockpane/fio-extras/internal/go-ethereum-hdwallet"
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcutil"
 	"github.com/fioprotocol/fio-go/eos"
 	"github.com/fioprotocol/fio-go/eos/ecc"
-	hdwallet "github.com/frameloss/fio-extras/internal/go-ethereum-hdwallet"
 	"github.com/tyler-smith/go-bip32"
 	mrand "math/rand" // #nosec
 	"strings"
