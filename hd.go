@@ -7,6 +7,7 @@ import (
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcutil"
+	"github.com/fioprotocol/fio-go"
 	"github.com/fioprotocol/fio-go/eos"
 	"github.com/fioprotocol/fio-go/eos/ecc"
 	"github.com/tyler-smith/go-bip32"
@@ -190,6 +191,20 @@ func keyAt(wallet *hdwallet.Wallet, index int) (*ecc.PrivateKey, error) {
 		return nil, err
 	}
 	return k, nil
+}
+
+// NewAccountFromString returns a fio.Account from the first key derived, this is a shortcut for getting the first key
+// as an account.
+func NewAccountFromString(mnemonic string) (account *fio.Account, err error) {
+	hd, err := NewHdFromString(mnemonic)
+	if err != nil {
+		return nil, err
+	}
+	k, err := hd.KeyAt(0)
+	if err != nil {
+		return nil, err
+	}
+	return fio.NewAccountFromWif(k.Keys[0].String())
 }
 
 // HdQuiz is used for prompting a user to confirm the mnemonic phrase by providing
